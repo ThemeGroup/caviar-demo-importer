@@ -206,7 +206,7 @@ class Caviar_Demo_Importer {
 			require_once plugin_dir_path( __FILE__ ) . '/includes/class-content-importer.php';
 		}
 
-		//do_action( 'caviar_demo_import_before_import_content', $file );
+		do_action( 'caviar_demo_import_before_import_content', $file );
 
 		$importer = new Caviar_Demo_Content_Importer( array(
 			'fetch_attachments' => true
