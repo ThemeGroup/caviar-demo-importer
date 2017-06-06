@@ -343,10 +343,9 @@ add_action( 'caviar_demo_import_before_import_content', 'caviar_demo_import_prod
  */
 function caviar_demo_import_product_attributes( $file ) {
 	global $wpdb;
-	define( 'CDI_PLUGIN_PATH', plugin_dir_path( __FILE__ ) );
 
 	if ( ! class_exists( 'WXR_Parser' ) ) {
-		require_once CDI_PLUGIN_PATH . '/caviar-demo-importer/includes/parsers.php';
+		require_once WP_PLUGIN_DIR . '/caviar-demo-importer-master/includes/parsers.php';
 	}
 
 	$parser      = new WXR_Parser();
