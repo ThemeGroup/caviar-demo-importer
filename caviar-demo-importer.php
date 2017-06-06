@@ -5,7 +5,7 @@
  * Description: One click import demo content
  * Author: Themedeux
  * Author URI: http://themedeux.com
- * Version: 1.0
+ * Version: 1.0.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
