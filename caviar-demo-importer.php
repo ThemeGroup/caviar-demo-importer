@@ -507,7 +507,6 @@ class Caviar_Demo_Importer {
 
 		$type = $_GET['type'];
 		$dir = $this->get_demo_path();
-
 		switch ( $type ) {
 			case 'content':
 				$file = $dir . '/demo-content.xml';
@@ -758,4 +757,5 @@ if ( version_compare( phpversion(), '5.3.2', '<' ) ) {
 		new Caviar_Demo_Importer();
 	} );
 }
+
 require_once CAVIAR_DEMO_IMPORTER_PATH . 'includes/content-demo-import.php';
