@@ -49,7 +49,7 @@ class Caviar_Demo_Customizer_Importer {
 
 		// Import custom options.
 		if ( isset( $data['options'] ) ) {
-			require dirname( __FILE__ ) . '/customizer-option.php';
+			require CAVIAR_DEMO_IMPORTER_PATH . 'includes/customizer-option.php';
 
 			foreach ( $data['options'] as $option_key => $option_value ) {
 				$option = new Caviar_Demo_Customizer_Option( $wp_customize, $option_key, array(
@@ -116,9 +116,9 @@ class Caviar_Demo_Customizer_Importer {
 		$data = new stdClass();
 
 		if ( ! function_exists( 'media_handle_sideload' ) ) {
-			require_once( ABSPATH . 'wp-admin/includes/media.php' );
-			require_once( ABSPATH . 'wp-admin/includes/file.php' );
-			require_once( ABSPATH . 'wp-admin/includes/image.php' );
+			require_once ABSPATH . 'wp-admin/includes/media.php';
+			require_once ABSPATH . 'wp-admin/includes/file.php';
+			require_once ABSPATH . 'wp-admin/includes/image.php';
 		}
 
 		if ( ! empty( $file ) ) {

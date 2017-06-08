@@ -345,7 +345,7 @@ function caviar_demo_import_product_attributes( $file ) {
 	global $wpdb;
 
 	if ( ! class_exists( 'WXR_Parser' ) ) {
-		require_once WP_PLUGIN_DIR . '/caviar-demo-importer/includes/parsers.php';
+		require_once CAVIAR_DEMO_IMPORTER_PATH . 'includes/parsers.php';
 	}
 
 	$parser      = new WXR_Parser();

@@ -6,7 +6,7 @@ if ( ! class_exists( 'WP_Importer' ) ) {
 
 // Include required files, if not already present (via separate plugin).
 if ( ! class_exists( 'WXR_Importer' ) ) {
-	require dirname( __FILE__ ) . '/class-wxr-importer.php';
+	require CAVIAR_DEMO_IMPORTER_PATH . 'includes/class-wxr-importer.php';
 }
 
 class Caviar_Demo_Content_Importer extends WXR_Importer {

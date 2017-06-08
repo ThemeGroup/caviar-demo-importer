@@ -203,7 +203,7 @@ class Caviar_Demo_Importer {
 
 		// Import content.
 		if ( ! class_exists( 'Caviar_Demo_Content_Importer' ) ) {
-			require_once plugin_dir_path( __FILE__ ) . '/includes/class-content-importer.php';
+			require_once CAVIAR_DEMO_IMPORTER_PATH . 'includes/class-content-importer.php';
 		}
 
 		do_action( 'caviar_demo_import_before_import_content', $file );
@@ -213,11 +213,11 @@ class Caviar_Demo_Importer {
 		) );
 
 		if ( ! class_exists( 'WP_Importer_Logger' ) ) {
-			require_once plugin_dir_path( __FILE__ ) . '/includes/class-logger.php';
+			require_once CAVIAR_DEMO_IMPORTER_PATH . 'includes/class-logger.php';
 		}
 
 		if ( ! class_exists( 'WP_Importer_Logger_ServerSentEvents' ) ) {
-			require_once plugin_dir_path( __FILE__ ) . '/includes/class-logger-serversentevents.php';
+			require_once CAVIAR_DEMO_IMPORTER_PATH . 'includes/class-logger-serversentevents.php';
 		}
 
 		$logger = new WP_Importer_Logger_ServerSentEvents();
@@ -237,7 +237,7 @@ class Caviar_Demo_Importer {
 		}
 
 		if( ! class_exists( 'Caviar_Demo_Customizer_Importer' ) ) {
-			require_once plugin_dir_path( __FILE__ ) . 'includes/customizer-importer.php';
+			require_once CAVIAR_DEMO_IMPORTER_PATH . 'includes/customizer-importer.php';
 		}
 
 		do_action( 'caviar_demo_import_before_import_customizer', $file );
@@ -263,7 +263,7 @@ class Caviar_Demo_Importer {
 		}
 
 		if ( ! class_exists( 'Caviar_Demo_Widgets_Importer') ) {
-			require_once plugin_dir_path( __FILE__ ) . 'includes/widgets-importer.php';
+			require_once CAVIAR_DEMO_IMPORTER_PATH . 'includes/widgets-importer.php';
 		}
 
 		do_action( 'caviar_demo_import_before_import_widgets', $file );
@@ -758,4 +758,4 @@ if ( version_compare( phpversion(), '5.3.2', '<' ) ) {
 		new Caviar_Demo_Importer();
 	} );
 }
-require_once( CAVIAR_DEMO_IMPORTER_PATH . 'includes/content-demo-import.php' );
+require_once CAVIAR_DEMO_IMPORTER_PATH . 'includes/content-demo-import.php';
